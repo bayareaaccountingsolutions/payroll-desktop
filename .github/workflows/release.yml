@@ -1,6 +1,3 @@
-# Builds the Windows and Mac installers and publishes them as a GitHub Release.
-# Installed apps see the new release and update themselves (see README ▸ Part C).
-# Trigger: push a tag like v1.0.1   (git tag v1.0.1 && git push origin v1.0.1)
 name: Build & Release
 
 on:
@@ -30,10 +27,4 @@ jobs:
         run: npx electron-builder --publish always
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Optional — Mac signing & notarization (enables silent auto-install on Mac). Leave the secrets unset to build unsigned.
-          CSC_LINK: ${{ matrix.os == 'macos-latest' && secrets.MAC_CERT_P12_BASE64 || '' }}
-          CSC_KEY_PASSWORD: ${{ matrix.os == 'macos-latest' && secrets.MAC_CERT_PASSWORD || '' }}
-          APPLE_ID: ${{ secrets.APPLE_ID }}
-          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
-          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
-          CSC_IDENTITY_AUTO_DISCOVERY: ${{ secrets.MAC_CERT_P12_BASE64 != '' && 'true' || 'false' }}
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
