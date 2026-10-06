@@ -1,7 +1,7 @@
 {
   "name": "payroll-desktop",
   "productName": "Payroll System",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Attendance, Payroll & Salary Slip desktop app — works on your shared Google Sheet",
   "main": "src/main.js",
   "author": "Bay Area Accounting Solutions <info@bayareaaccountingsolutions.com>",
