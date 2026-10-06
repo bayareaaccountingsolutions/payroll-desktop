@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self'">
+  <title>Payroll System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside id="side">
+    <div class="brand"><b id="brandName">Payroll System</b><span>Attendance · Payroll · Salary Slips</span></div>
+    <nav id="nav">
+      <button data-v="dashboard"><span class="ic">▦</span>Dashboard</button>
+      <button data-v="attendance"><span class="ic">✓</span>Attendance</button>
+      <button data-v="register"><span class="ic">≡</span>Payroll Register</button>
+      <button data-v="slip"><span class="ic">₹</span>Salary Slip</button>
+      <button data-v="employees"><span class="ic">☺</span>Employees</button>
+      <div class="sep"></div>
+      <button data-v="sheet"><span class="ic">⊞</span>Google Sheet</button>
+      <button data-v="tools" data-admin="1"><span class="ic">⚙</span>Admin Tools</button>
+      <button data-v="settings"><span class="ic">⚑</span>Settings</button>
+    </nav>
+    <div class="side-foot"><div id="who">Not connected</div><div id="conn" class="pill bad"><span class="dot"></span>Offline</div></div>
+  </aside>
+  <main id="main">
+    <header id="top"><h1 id="title">Dashboard</h1><span id="ver" class="hint"></span></header>
+    <div id="banner"></div>
+    <section id="view"></section>
+  </main>
+  <div id="pop"></div>
+  <div id="tip"></div>
+  <div id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
